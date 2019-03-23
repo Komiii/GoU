@@ -1,5 +1,6 @@
 var data  = {
     games: [],
+    seen: null,
 };
 var vue_app = new Vue({
     el: '#app',
@@ -10,5 +11,5 @@ var vue_wrap = new Vue({
 	data:{ seen:true }
 })
 function onGamesData(games) {
-    data.games = games
+    data.games = games;
 }
