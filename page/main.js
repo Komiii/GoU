@@ -1,6 +1,7 @@
 var data  = {
     games: [],
     seen: null,
+    search: '',
 };
 var vue_app = new Vue({
     el: '#app',

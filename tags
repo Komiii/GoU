@@ -51,6 +51,7 @@ div.hidlu	page/styles.css	/^div.hidlu {$/;"	c
 games	page/main.js	/^    games: [],$/;"	p	class:data
 html	page/styles.css	/^html, body {$/;"	s
 onGamesData	page/main.js	/^function onGamesData(games) {$/;"	f
+search	page/main.js	/^    search: '',$/;"	p	class:data
 seen	page/main.js	/^    seen: null,$/;"	p	class:data
 vue_app	page/main.js	/^var vue_app = new Vue({$/;"	v
 vue_wrap	page/main.js	/^var vue_wrap = new Vue({$/;"	v
