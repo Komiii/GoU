@@ -1,0 +1,48 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0d560136/
+.demo-avatar	page/styles.css	/^.demo-avatar {$/;"	c
+.demo-avatar-dropdown	page/styles.css	/^.demo-avatar-dropdown {$/;"	c
+.demo-cards	page/styles.css	/^.demo-cards {$/;"	c
+.demo-cards .demo-separator	page/styles.css	/^.demo-cards .demo-separator {$/;"	c
+.demo-cards .mdl-card__actions a	page/styles.css	/^.demo-cards .mdl-card__actions a {$/;"	s
+.demo-cards .mdl-card__title.mdl-card__title	page/styles.css	/^.demo-cards .mdl-card__title.mdl-card__title {$/;"	c
+.demo-cards h3	page/styles.css	/^.demo-cards h3 {$/;"	s
+.demo-cards ul	page/styles.css	/^.demo-cards ul {$/;"	s
+.demo-chart:nth-child(1)	page/styles.css	/^.demo-chart:nth-child(1) {$/;"	c
+.demo-chart:nth-child(2)	page/styles.css	/^.demo-chart:nth-child(2) {$/;"	c
+.demo-chart:nth-child(3)	page/styles.css	/^.demo-chart:nth-child(3) {$/;"	c
+.demo-chart:nth-child(4)	page/styles.css	/^.demo-chart:nth-child(4) {$/;"	c
+.demo-charts	page/styles.css	/^.demo-charts {$/;"	c
+.demo-content	page/styles.css	/^.demo-content {$/;"	c
+.demo-drawer	page/styles.css	/^.demo-drawer {$/;"	c
+.demo-drawer .demo-navigation	page/styles.css	/^.demo-drawer .demo-navigation {$/;"	c
+.demo-drawer .mdl-menu .mdl-menu__item	page/styles.css	/^.demo-drawer .mdl-menu .mdl-menu__item {$/;"	c
+.demo-drawer .mdl-menu__container	page/styles.css	/^.demo-drawer .mdl-menu__container {$/;"	c
+.demo-drawer-header	page/styles.css	/^.demo-drawer-header {$/;"	c
+.demo-graph:nth-child(1)	page/styles.css	/^.demo-graph:nth-child(1) {$/;"	c
+.demo-graph:nth-child(2)	page/styles.css	/^.demo-graph:nth-child(2) {$/;"	c
+.demo-graphs	page/styles.css	/^.demo-graphs {$/;"	c
+.demo-layout .demo-navigation .mdl-navigation__link	page/styles.css	/^.demo-layout .demo-navigation .mdl-navigation__link {$/;"	c
+.demo-layout .demo-navigation .mdl-navigation__link:hover	page/styles.css	/^.demo-layout .demo-navigation .mdl-navigation__link:hover {$/;"	c
+.demo-layout .mdl-layout__header .mdl-layout__drawer-button	page/styles.css	/^.demo-layout .mdl-layout__header .mdl-layout__drawer-button {$/;"	c
+.demo-navigation	page/styles.css	/^.demo-navigation {$/;"	c
+.demo-navigation .mdl-navigation__link .material-icons	page/styles.css	/^.demo-navigation .mdl-navigation__link .material-icons {$/;"	c
+.demo-options .material-icons	page/styles.css	/^.demo-options .material-icons {$/;"	c
+.demo-options .mdl-card__actions	page/styles.css	/^.demo-options .mdl-card__actions {$/;"	c
+.demo-options .mdl-checkbox__box-outline	page/styles.css	/^.demo-options .mdl-checkbox__box-outline {$/;"	c
+.demo-options h3	page/styles.css	/^.demo-options h3 {$/;"	s
+.demo-options li	page/styles.css	/^.demo-options li {$/;"	s
+.demo-options ul	page/styles.css	/^.demo-options ul {$/;"	s
+.demo-updates .mdl-card__title	page/styles.css	/^.demo-updates .mdl-card__title {$/;"	c
+.mdl-layout__drawer .avatar	page/styles.css	/^.mdl-layout__drawer .avatar {$/;"	c
+:root .demo-graph	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graph {$/;"	c
+:root .demo-graphs	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graphs {$/;"	c
+_:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graph {$/;"	s
+_:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graphs {$/;"	s
+body	page/styles.css	/^html, body {$/;"	s
+html	page/styles.css	/^html, body {$/;"	s
