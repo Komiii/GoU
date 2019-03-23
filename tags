@@ -42,6 +42,8 @@
 .mdl-layout__drawer .avatar	page/styles.css	/^.mdl-layout__drawer .avatar {$/;"	c
 :root .demo-graph	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graph {$/;"	c
 :root .demo-graphs	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graphs {$/;"	c
+AnonymousFunctionf124cf210100	page/main.js	/^        gameClicked: function(game) {$/;"	f
+AnonymousFunctionf124cf210200	page/main.js	/^				setTimeout(function() {$/;"	f	function:AnonymousFunctionf124cf210100
 Simple Collapsible	page/games.html	/^    <h2>Simple Collapsible<\/h2>$/;"	i
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graph {$/;"	s
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graphs {$/;"	s
@@ -53,7 +55,7 @@ html	page/styles.css	/^html, body {$/;"	s
 onGamesData	page/main.js	/^function onGamesData(games) {$/;"	f
 search	page/main.js	/^    search: '',$/;"	p	class:data
 seen	page/main.js	/^    seen: null,$/;"	p	class:data
+setupCanvas	page/main.js	/^function setupCanvas(game) {$/;"	f
 vue_app	page/main.js	/^var vue_app = new Vue({$/;"	v
-vue_wrap	page/main.js	/^var vue_wrap = new Vue({$/;"	v
 {{ game.name }}	page/games.html	/^                        <h2 class="mdl-card__title-text">{{ game.name }}<\/h2>$/;"	i
 {{ game.name }}	page/index.html	/^                            <h2 class="mdl-card__title-text">{{ game.name }}<\/h2>$/;"	i
