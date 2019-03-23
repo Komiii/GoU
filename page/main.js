@@ -64,13 +64,18 @@ var state;
 function onClick(column, row) {
     console.log(column, row);
     var id = getId(column, row);
-    if(id < state['selectionStart']) {
-        state['selectionStart'] = id;
-    } else if(id > state['selectionEnd']) {
-        state['selectionEnd'] = id;
-    } else if(id <  {
-
+    if(id < state.selectionStart) {
+        state.selectionStart = id;
+    } else if(id > state.selectionEnd) {
+        state.selectionEnd = id;
+    } else if(Math.abs(id - state.selectionEnd) < Math.abs(id - state.selectionStart)) {
+        state.selectionEnd = id;
+    } else if(Math.abs(id - state.selectionEnd) > Math.abs(id - state.selectionStart)) {
+        state.selectionStart = id;
+    } else {
+        state[Math.random() > 0.5 ? 'selectionStart' : 'selectionEnd'] = id;
     }
+
     if(id < state['selectionEnd'] < state['selectionStart']) {
         [ state['selectionStart'], state['selectionEnd'] ] = [ state['selectionEnd'], state['selectionStart'] ]
     }

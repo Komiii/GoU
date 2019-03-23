@@ -63,19 +63,19 @@ days	page/main.js	/^var days = ["Pon.","Wt.","Śrd.","Czw.","Pt.","Sob.","Ndz."]
 div.hidlu	page/styles.css	/^div.hidlu {$/;"	c
 free	page/main.js	/^    free: {$/;"	c	class:colors
 games	page/main.js	/^    games: [],$/;"	p	class:data
-getColors	page/main.js	/^function getColors(id) {$/;"	f	function:onClick
-getColorsBetween	page/main.js	/^function getColorsBetween(id1, id2) {$/;"	f	function:onClick
-getId	page/main.js	/^function getId(y, x) {$/;"	f	function:onClick
+getColors	page/main.js	/^function getColors(id) {$/;"	f
+getColorsBetween	page/main.js	/^function getColorsBetween(id1, id2) {$/;"	f
+getId	page/main.js	/^function getId(y, x) {$/;"	f
 html	page/styles.css	/^html, body {$/;"	s
 onClick	page/main.js	/^function onClick(column, row) {$/;"	f
-onGamesData	page/main.js	/^function onGamesData(games) {$/;"	f	function:onClick
+onGamesData	page/main.js	/^function onGamesData(games) {$/;"	f
 onclick	page/main.js	/^	cnv.onclick = function(event) {$/;"	f	function:cnv
 search	page/main.js	/^    search: '',$/;"	p	class:data
 seen	page/main.js	/^    seen: null,$/;"	p	class:data
 selectedEnd	page/main.js	/^	selectedEnd: {$/;"	c	class:colors
 selectedGap	page/main.js	/^	selectedGap: {$/;"	c	class:colors
 selectedMiddle	page/main.js	/^    selectedMiddle: {$/;"	c	class:colors
-setupCanvas	page/main.js	/^function setupCanvas(game, _state) {$/;"	f	function:onClick
+setupCanvas	page/main.js	/^function setupCanvas(game, _state) {$/;"	f
 state	page/main.js	/^var state;$/;"	v
 text	page/main.js	/^        text: '#050505',$/;"	p	class:colors.free
 text	page/main.js	/^        text: '#050505',$/;"	p	class:colors.selectedGap
