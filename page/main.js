@@ -34,26 +34,59 @@ function circle(ctx, x, y, hour, day) {
 	circles.push([x + CIRCLE_DIAMETER / 2, y + CIRCLE_DIAMETER / 2, hour, day]);
 }
 function text(ctx, text, x, y) {
-    ctx.fillStyle = '#fefefe';
     ctx.font = "20px Arial";
 	ctx.fillText(text, x + CIRCLE_DIAMETER / 2, y + CIRCLE_DIAMETER / 2);
 }
 
 
 var colors = {
-	selected: '#00838f',
-	selectedGap: '#b0bec5',
+	selectedEnd: {
+        bg: '#00838f',
+        text: '#fefefe',
+    },
+	selectedGap: {
+        bg: '#b0bec5',
+        text: '#050505',
+    },
+    selectedMiddle: {
+        bg: '#29b6f6',
+        text: '#050505',
+    },
+    free: {
+        bg: '#f5f5f5',
+        text: '#050505',
+    },
 }
 
 
-var canvasState;
+var state;
 function onClick(column, row) {
     console.log(column, row);
 }
 
+function getColors(id) {
+    if(id == state.selectionStart || id == state.selectionEnd) {
+        return colors.selectedEnd;
+    } else if(id > state.selectionStart && id < state.selectionEnd) {
+        return colors.selectedMiddle;
+    } else {
+        return colors.free;
+    }
+}
+
+function getColorsBetween(id1, id2) {
+    if(state.selectionStart <= id1 && state.selectionEnd >= id2)
+        return colors.selectedGap;
+    else return colors.free;
+}
+
+function getId(y, x) {
+    return 13 * y + x;
+}
+
 function setupCanvas(game) {
     circles = [];
-    canvasState = { selectionStep: 0 };
+    state = { selectionStep: 0, selectionStart: getId(1,1), selectionEnd: getId(2,2) };
 
 	var cnv = document.getElementsByClassName('canvas-picker')[0];
 	cnv.height = 7*(CIRCLE_DIAMETER+VERTICAL_GAP_HEIGHT);
@@ -62,10 +95,12 @@ function setupCanvas(game) {
 	ctx.textBaseline = 'middle';
 	for(var j = 0; j<7;j++){
 		for(var i = 0; i <= /* or < ??? */ 24; i += 2) {
-			ctx.fillStyle = colors.selected;
+		    var curColors = getColors(getId(j, i/2));
+			ctx.fillStyle = curColors.bg;
 			circle(ctx, 
 				i/2 * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
 				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER, i/2, j);
+			ctx.fillStyle = curColors.text;
 			text(ctx, i + ':00',
 				i/2 * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
 				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER);

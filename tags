@@ -50,25 +50,40 @@ GAP_WIDTH	page/main.js	/^var GAP_WIDTH = 1080 \/ 80;$/;"	v
 VERTICAL_GAP_HEIGHT	page/main.js	/^var VERTICAL_GAP_HEIGHT = CIRCLE_DIAMETER \/ 7;$/;"	v
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graph {$/;"	s
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graphs {$/;"	s
+bg	page/main.js	/^        bg: '#00838f',$/;"	p	class:colors.selectedEnd
+bg	page/main.js	/^        bg: '#29b6f6',$/;"	p	class:colors.selectedMiddle
+bg	page/main.js	/^        bg: '#b0bec5',$/;"	p	class:colors.selectedGap
+bg	page/main.js	/^        bg: '#f5f5f5',$/;"	p	class:colors.free
 body	page/styles.css	/^html, body {$/;"	s
-canvasState	page/main.js	/^    canvasState = { selectionStep: 0 };$/;"	c	class:setupCanvas
-canvasState	page/main.js	/^var canvasState;$/;"	v
 circle	page/main.js	/^function circle(ctx, x, y, hour, day) {$/;"	f
 circles	page/main.js	/^var circles = [];$/;"	v
 colors	page/main.js	/^var colors = {$/;"	c
 compareDist	page/main.js	/^        function compareDist(a, b) {$/;"	f	function:AnonymousFunctionf124cf210300
 data	page/main.js	/^var data  = {$/;"	c
 div.hidlu	page/styles.css	/^div.hidlu {$/;"	c
+free	page/main.js	/^    free: {$/;"	c	class:colors
 games	page/main.js	/^    games: [],$/;"	p	class:data
+getColors	page/main.js	/^function getColors(id) {$/;"	f
+getColorsBetween	page/main.js	/^function getColorsBetween(id1, id2) {$/;"	f
+getId	page/main.js	/^function getId(y, x) {$/;"	f
 html	page/styles.css	/^html, body {$/;"	s
 onClick	page/main.js	/^function onClick(column, row) {$/;"	f
 onGamesData	page/main.js	/^function onGamesData(games) {$/;"	f
 search	page/main.js	/^    search: '',$/;"	p	class:data
 seen	page/main.js	/^    seen: null,$/;"	p	class:data
-selected	page/main.js	/^	selected: '#00838f',$/;"	p	class:colors
-selectedGap	page/main.js	/^	selectedGap: '#b0bec5',$/;"	p	class:colors
-selectionStep	page/main.js	/^    canvasState = { selectionStep: 0 };$/;"	p	class:setupCanvas.canvasState
+selectedEnd	page/main.js	/^	selectedEnd: {$/;"	c	class:colors
+selectedGap	page/main.js	/^	selectedGap: {$/;"	c	class:colors
+selectedMiddle	page/main.js	/^    selectedMiddle: {$/;"	c	class:colors
+selectionEnd	page/main.js	/^    state = { selectionStep: 0, selectionStart: getId(1,1), selectionEnd: getId(2,2) };$/;"	p	class:setupCanvas.state
+selectionStart	page/main.js	/^    state = { selectionStep: 0, selectionStart: getId(1,1), selectionEnd: getId(2,2) };$/;"	p	class:setupCanvas.state
+selectionStep	page/main.js	/^    state = { selectionStep: 0, selectionStart: getId(1,1), selectionEnd: getId(2,2) };$/;"	p	class:setupCanvas.state
 setupCanvas	page/main.js	/^function setupCanvas(game) {$/;"	f
+state	page/main.js	/^    state = { selectionStep: 0, selectionStart: getId(1,1), selectionEnd: getId(2,2) };$/;"	c	class:setupCanvas
+state	page/main.js	/^var state;$/;"	v
+text	page/main.js	/^        text: '#050505',$/;"	p	class:colors.free
+text	page/main.js	/^        text: '#050505',$/;"	p	class:colors.selectedGap
+text	page/main.js	/^        text: '#050505',$/;"	p	class:colors.selectedMiddle
+text	page/main.js	/^        text: '#fefefe',$/;"	p	class:colors.selectedEnd
 text	page/main.js	/^function text(ctx, text, x, y) {$/;"	f
 vue_app	page/main.js	/^var vue_app = new Vue({$/;"	v
 {{ game.name }}	page/games.html	/^                            <h2 class="mdl-card__title-text">{{ game.name }}<\/h2>$/;"	i
