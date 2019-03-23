@@ -22,7 +22,7 @@ var vue_app = new Vue({
 
 function setupCanvas(game) {
 	console.log(game);
-	console.log(document.getElementsByClassName('canvas-picker'));
+	var cnv = document.getElementsByClassName('canvas-picker')[0];
 }
 
 function onGamesData(games) {
