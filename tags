@@ -44,6 +44,7 @@
 :root .demo-graphs	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graphs {$/;"	c
 AnonymousFunctionf124cf210100	page/main.js	/^        gameClicked: function(game) {$/;"	f
 AnonymousFunctionf124cf210200	page/main.js	/^				setTimeout(function() {$/;"	f	function:AnonymousFunctionf124cf210100
+AnonymousFunctionf124cf210300	page/main.js	/^	cnv.addEventListener('click',function(event) {$/;"	f
 CIRCLE_DIAMETER	page/main.js	/^var CIRCLE_DIAMETER = (1080 - 13 * GAP_WIDTH) \/ 13;$/;"	v
 GAP_WIDTH	page/main.js	/^var GAP_WIDTH = 1080 \/ 80;$/;"	v
 VERTICAL_GAP_HEIGHT	page/main.js	/^var VERTICAL_GAP_HEIGHT = CIRCLE_DIAMETER \/ 7;$/;"	v
@@ -52,8 +53,10 @@ _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-g
 body	page/styles.css	/^html, body {$/;"	s
 canvasState	page/main.js	/^    canvasState = { selectionStep: 0 };$/;"	c	class:setupCanvas
 canvasState	page/main.js	/^var canvasState;$/;"	v
-circle	page/main.js	/^function circle(ctx, x, y) {$/;"	f
+circle	page/main.js	/^function circle(ctx, x, y, hour, day) {$/;"	f
+circles	page/main.js	/^var circles = [];$/;"	v
 colors	page/main.js	/^var colors = {$/;"	c
+compareDist	page/main.js	/^function compareDist(a,b){$/;"	f
 data	page/main.js	/^var data  = {$/;"	c
 div.hidlu	page/styles.css	/^div.hidlu {$/;"	c
 games	page/main.js	/^    games: [],$/;"	p	class:data
@@ -68,6 +71,8 @@ selectionStep	page/main.js	/^    canvasState = { selectionStep: 0 };$/;"	p	class
 setupCanvas	page/main.js	/^function setupCanvas(game) {$/;"	f
 text	page/main.js	/^function text(ctx, text, x, y) {$/;"	f
 vue_app	page/main.js	/^var vue_app = new Vue({$/;"	v
+xClick	page/main.js	/^var xClick;$/;"	v
+yClick	page/main.js	/^var yClick;$/;"	v
 {{ game.name }}	page/games.html	/^                            <h2 class="mdl-card__title-text">{{ game.name }}<\/h2>$/;"	i
 {{ game.name }}	page/index.html	/^                            <h2 class="mdl-card__title-text">{{ game.name }}<\/h2>$/;"	i
 {{ game.name }}	page/myreserv.html	/^                                        <h2 class="mdl-card__title-text">{{ game.name }}<\/h2>$/;"	i

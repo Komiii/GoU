@@ -73,8 +73,10 @@ function setupCanvas(game) {
 			VERTICAL_GAP_HEIGHT/2);
 	}
 	cnv.addEventListener('click',function(event) {
-		xClick=event.pageX;
-		yClick=event.pageY;
+        var b = cnv.getBoundingClientRect();
+        var scale = cnv.width / parseFloat(b.width);
+        xClick = (event.clientX - b.left) * scale;
+        yClick = (event.clientY - b.top) * scale;
 		circles.sort(compareDist);
 		console.log(circles[0]);
 		console.log(xClick,yClick);
