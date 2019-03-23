@@ -46,3 +46,4 @@ _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-g
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graphs {$/;"	s
 body	page/styles.css	/^html, body {$/;"	s
 html	page/styles.css	/^html, body {$/;"	s
+onGamesData	page/main.js	/^function onGamesData(games) {$/;"	f
