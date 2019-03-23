@@ -63,7 +63,17 @@ var days = ["Pon.","Wt.","Śrd.","Czw.","Pt.","Sob.","Ndz."];
 var state;
 function onClick(column, row) {
     console.log(column, row);
-    state[['selectionStart', 'selectedEnd'][+(state.selectionStep = !state.selectionStep)]] = getId(row, column);
+    var id = getId(column, row);
+    if(id < state['selectionStart']) {
+        state['selectionStart'] = id;
+    } else if(id > state['selectionEnd']) {
+        state['selectionEnd'] = id;
+    } else if(id <  {
+
+    }
+    if(id < state['selectionEnd'] < state['selectionStart']) {
+        [ state['selectionStart'], state['selectionEnd'] ] = [ state['selectionEnd'], state['selectionStart'] ]
+    }
     setupCanvas(state.game, state);
 }
 
@@ -111,7 +121,7 @@ function setupCanvas(game, _state) {
 				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER);
 		}
 	}
-	cnv.addEventListener('click',function(event) {
+	cnv.onclick = function(event) {
         var b = cnv.getBoundingClientRect();
         var scale = cnv.width / parseFloat(b.width);
         var xClick = (event.clientX - b.left) * scale;
@@ -121,7 +131,7 @@ function setupCanvas(game, _state) {
         }
 		circles.sort(compareDist);
 		onClick(circles[0][2], circles[0][3]);
-    });
+    };
 }
 
 function onGamesData(games) {
