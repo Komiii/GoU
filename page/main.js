@@ -30,13 +30,21 @@ function circle(ctx, x, y) {
 	ctx.fill();
 }
 
+var colors = {
+	selected: '#00838f',
+	selectedGap: '#b0bec5',
+}
+
 function setupCanvas(game) {
 	var cnv = document.getElementsByClassName('canvas-picker')[0];
 	var ctx = cnv.getContext('2d');
+	ctx.textAlign = 'center';
 	for(var i = 0; i <= /* or < ??? */ 24; i += 2) {
+		ctx.fillStyle = colors.selected;
 		circle(ctx, 
 			i/2 * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
 			VERTICAL_GAP_HEIGHT/2);
+
 	}
 }
 
