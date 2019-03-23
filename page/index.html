@@ -87,7 +87,7 @@
             <main class="mdl-layout__content mdl-color--grey-100">
                 <div class="mdl-grid demo-content">
 
-                    <div v-for="game in games" v-if="game.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 || search.length == 0" id="another-card" class="mdl-card demo-card mdl-shadow--2dp mdlext-dark-color-theme" v-bind:style="seen==game.id ? '' : 'min-height: 0px'">
+                    <div v-for="game in games" v-if="game.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 || search.length == 0" class="mdl-card demo-card mdl-shadow--2dp mdlext-dark-color-theme" v-bind:style="seen==game.id ? '' : 'min-height: 0px'">
                         <header class="mdl-card__title mdl-color--primary mdl-color-text--primary-contrast mdlext-js-collapsible mdlext-collapsible">
                             <button v-on:click="if(seen == game.id) seen = null; else seen = game.id;" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" >
                                 <i class="material-icons" aria-hidden="true">view_headline</i>
@@ -95,11 +95,11 @@
                             <h2 class="mdl-card__title-text">{{ game.name }}</h2>
                         </header>
 						
-                        <div class="options" v-if="seen == game.id" id="hello">
+                        <div class="options" v-if="seen == game.id>
 								
 						</div>
 
-                    </div>
+             </div>
                 </div>
             </main>
         </div>
