@@ -1,3 +1,10 @@
+var data  = {
+    games: [],
+};
+var vue_app = new Vue({
+    el: '#app',
+    data: data
+});
 function onGamesData(games) {
-    console.log(games)
+    data.games = games
 }
