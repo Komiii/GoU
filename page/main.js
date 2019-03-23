@@ -23,6 +23,8 @@ var vue_app = new Vue({
 function setupCanvas(game) {
 	console.log(game);
 	var cnv = document.getElementsByClassName('canvas-picker')[0];
+	var ctx = cnv.getContex("2d");
+	ctx.beginPath();
 }
 
 function onGamesData(games) {
