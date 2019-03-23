@@ -45,7 +45,7 @@
 AnonymousFunctionf124cf210100	page/main.js	/^        gameClicked: function(game) {$/;"	f
 AnonymousFunctionf124cf210200	page/main.js	/^				setTimeout(function() {$/;"	f	function:AnonymousFunctionf124cf210100
 AnonymousFunctionf124cf210300	page/main.js	/^	cnv.addEventListener('click',function(event) {$/;"	f
-CIRCLE_DIAMETER	page/main.js	/^var CIRCLE_DIAMETER = (1080 - 13 * GAP_WIDTH) \/ 13;$/;"	v
+CIRCLE_DIAMETER	page/main.js	/^var CIRCLE_DIAMETER = (1080 - 14 * GAP_WIDTH) \/ 14;$/;"	v
 GAP_WIDTH	page/main.js	/^var GAP_WIDTH = 1080 \/ 80;$/;"	v
 VERTICAL_GAP_HEIGHT	page/main.js	/^var VERTICAL_GAP_HEIGHT = CIRCLE_DIAMETER \/ 7;$/;"	v
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graph {$/;"	s
@@ -60,6 +60,7 @@ circles	page/main.js	/^var circles = [];$/;"	v
 colors	page/main.js	/^var colors = {$/;"	c
 compareDist	page/main.js	/^        function compareDist(a, b) {$/;"	f	function:AnonymousFunctionf124cf210300
 data	page/main.js	/^var data  = {$/;"	c
+days	page/main.js	/^var days = ["Pon.","Wt.","Śrd.","Czw.","Pt.","Sob.","Ndz."];$/;"	v
 div.hidlu	page/styles.css	/^div.hidlu {$/;"	c
 free	page/main.js	/^    free: {$/;"	c	class:colors
 games	page/main.js	/^    games: [],$/;"	p	class:data

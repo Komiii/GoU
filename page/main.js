@@ -21,7 +21,7 @@ var vue_app = new Vue({
 });
 
 var GAP_WIDTH = 1080 / 80;
-var CIRCLE_DIAMETER = (1080 - 13 * GAP_WIDTH) / 13;
+var CIRCLE_DIAMETER = (1080 - 14 * GAP_WIDTH) / 14;
 var VERTICAL_GAP_HEIGHT = CIRCLE_DIAMETER / 7;
 
 var circles = [];
@@ -58,6 +58,7 @@ var colors = {
     },
 }
 
+var days = ["Pon.","Wt.","Śrd.","Czw.","Pt.","Sob.","Ndz."];
 
 var state;
 function onClick(column, row) {
@@ -94,15 +95,17 @@ function setupCanvas(game) {
 	ctx.textAlign = 'center';
 	ctx.textBaseline = 'middle';
 	for(var j = 0; j<7;j++){
+		text(ctx,days[((new Date().getDay())+j-1)%7]+"spoko", GAP_WIDTH/2,
+				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER);
 		for(var i = 0; i <= /* or < ??? */ 24; i += 2) {
 		    var curColors = getColors(getId(j, i/2));
 			ctx.fillStyle = curColors.bg;
 			circle(ctx, 
-				i/2 * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
+				(i/2+1) * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
 				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER, i/2, j);
 			ctx.fillStyle = curColors.text;
 			text(ctx, i + ':00',
-				i/2 * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
+				(i/2+1) * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
 				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER);
 		}
 	}
