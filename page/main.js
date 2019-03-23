@@ -60,17 +60,20 @@ function setupCanvas(game) {
     canvasState = { selectionStep: 0 };
 
 	var cnv = document.getElementsByClassName('canvas-picker')[0];
+	cnv.height = 7*(CIRCLE_DIAMETER+VERTICAL_GAP_HEIGHT);
 	var ctx = cnv.getContext('2d');
 	ctx.textAlign = 'center';
 	ctx.textBaseline = 'middle';
-	for(var i = 0; i <= /* or < ??? */ 24; i += 2) {
-		ctx.fillStyle = colors.selected;
-		circle(ctx, 
-			i/2 * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
-			VERTICAL_GAP_HEIGHT/2, i/2, 0); //DODAĆ DZIEŃ
-		text(ctx, i + ':00',
-			i/2 * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
-			VERTICAL_GAP_HEIGHT/2);
+	for(var j = 0; j<7;j++){
+		for(var i = 0; i <= /* or < ??? */ 24; i += 2) {
+			ctx.fillStyle = colors.selected;
+			circle(ctx, 
+				i/2 * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
+				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER, i/2, j);
+			text(ctx, i + ':00',
+				i/2 * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
+				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER);
+		}
 	}
 	cnv.addEventListener('click',function(event) {
         var b = cnv.getBoundingClientRect();
