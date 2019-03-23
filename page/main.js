@@ -40,6 +40,10 @@ var colors = {
 	selectedGap: '#b0bec5',
 }
 
+function onClick(column, row) {
+    
+}
+
 function setupCanvas(game) {
 	var cnv = document.getElementsByClassName('canvas-picker')[0];
 	var ctx = cnv.getContext('2d');

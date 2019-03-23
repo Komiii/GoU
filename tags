@@ -56,6 +56,7 @@ data	page/main.js	/^var data  = {$/;"	c
 div.hidlu	page/styles.css	/^div.hidlu {$/;"	c
 games	page/main.js	/^    games: [],$/;"	p	class:data
 html	page/styles.css	/^html, body {$/;"	s
+onClick	page/main.js	/^function onClick(column, row) {$/;"	f
 onGamesData	page/main.js	/^function onGamesData(games) {$/;"	f
 search	page/main.js	/^    search: '',$/;"	p	class:data
 seen	page/main.js	/^    seen: null,$/;"	p	class:data
