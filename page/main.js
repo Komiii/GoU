@@ -27,7 +27,7 @@ var VERTICAL_GAP_HEIGHT = CIRCLE_DIAMETER / 7;
 function circle(ctx, x, y) {
 	ctx.beginPath();
 	ctx.arc(x + CIRCLE_DIAMETER / 2, y + CIRCLE_DIAMETER / 2, CIRCLE_DIAMETER / 2, 0, 2 * Math.PI);
-	ctx.stroke();
+	ctx.fill();
 }
 
 function setupCanvas(game) {

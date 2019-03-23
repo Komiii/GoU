@@ -46,7 +46,6 @@ AnonymousFunctionf124cf210100	page/main.js	/^        gameClicked: function(game)
 AnonymousFunctionf124cf210200	page/main.js	/^				setTimeout(function() {$/;"	f	function:AnonymousFunctionf124cf210100
 CIRCLE_DIAMETER	page/main.js	/^var CIRCLE_DIAMETER = (1080 - 13 * GAP_WIDTH) \/ 13;$/;"	v
 GAP_WIDTH	page/main.js	/^var GAP_WIDTH = 1080 \/ 80;$/;"	v
-Simple Collapsible	page/games.html	/^    <h2>Simple Collapsible<\/h2>$/;"	i
 VERTICAL_GAP_HEIGHT	page/main.js	/^var VERTICAL_GAP_HEIGHT = CIRCLE_DIAMETER \/ 7;$/;"	v
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graph {$/;"	s
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graphs {$/;"	s
@@ -61,5 +60,6 @@ search	page/main.js	/^    search: '',$/;"	p	class:data
 seen	page/main.js	/^    seen: null,$/;"	p	class:data
 setupCanvas	page/main.js	/^function setupCanvas(game) {$/;"	f
 vue_app	page/main.js	/^var vue_app = new Vue({$/;"	v
-{{ game.name }}	page/games.html	/^                        <h2 class="mdl-card__title-text">{{ game.name }}<\/h2>$/;"	i
+{{ game.name }}	page/games.html	/^                            <h2 class="mdl-card__title-text">{{ game.name }}<\/h2>$/;"	i
 {{ game.name }}	page/index.html	/^                            <h2 class="mdl-card__title-text">{{ game.name }}<\/h2>$/;"	i
+{{ game.name }}	page/myreserv.html	/^                                        <h2 class="mdl-card__title-text">{{ game.name }}<\/h2>$/;"	i
