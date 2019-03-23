@@ -45,5 +45,4 @@
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graph {$/;"	s
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graphs {$/;"	s
 body	page/styles.css	/^html, body {$/;"	s
-gradle.version	.gradle/buildOutputCleanup/cache.properties	/^gradle.version=4.6$/;"	k
 html	page/styles.css	/^html, body {$/;"	s
