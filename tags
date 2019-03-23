@@ -75,11 +75,7 @@ seen	page/main.js	/^    seen: null,$/;"	p	class:data
 selectedEnd	page/main.js	/^	selectedEnd: {$/;"	c	class:colors
 selectedGap	page/main.js	/^	selectedGap: {$/;"	c	class:colors
 selectedMiddle	page/main.js	/^    selectedMiddle: {$/;"	c	class:colors
-selectionEnd	page/main.js	/^    state = { selectionStep: 0, selectionStart: getId(1,1), selectionEnd: getId(2,2) };$/;"	p	class:setupCanvas.state
-selectionStart	page/main.js	/^    state = { selectionStep: 0, selectionStart: getId(1,1), selectionEnd: getId(2,2) };$/;"	p	class:setupCanvas.state
-selectionStep	page/main.js	/^    state = { selectionStep: 0, selectionStart: getId(1,1), selectionEnd: getId(2,2) };$/;"	p	class:setupCanvas.state
-setupCanvas	page/main.js	/^function setupCanvas(game) {$/;"	f
-state	page/main.js	/^    state = { selectionStep: 0, selectionStart: getId(1,1), selectionEnd: getId(2,2) };$/;"	c	class:setupCanvas
+setupCanvas	page/main.js	/^function setupCanvas(game, _state) {$/;"	f
 state	page/main.js	/^var state;$/;"	v
 text	page/main.js	/^        text: '#050505',$/;"	p	class:colors.free
 text	page/main.js	/^        text: '#050505',$/;"	p	class:colors.selectedGap

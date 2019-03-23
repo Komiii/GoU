@@ -63,6 +63,8 @@ var days = ["Pon.","Wt.","Śrd.","Czw.","Pt.","Sob.","Ndz."];
 var state;
 function onClick(column, row) {
     console.log(column, row);
+    state[['selectionStart', 'selectedEnd'][+(state.selectionStep = !state.selectionStep)]] = getId(row, column);
+    setupCanvas(state.game, state);
 }
 
 function getColors(id) {
@@ -85,9 +87,9 @@ function getId(y, x) {
     return 13 * y + x;
 }
 
-function setupCanvas(game) {
+function setupCanvas(game, _state) {
     circles = [];
-    state = { selectionStep: 0, selectionStart: getId(1,1), selectionEnd: getId(2,2) };
+    state = _state || { selectionStep: false, selectionStart: getId(1,1), selectionEnd: getId(2,2), game: game };
 
 	var cnv = document.getElementsByClassName('canvas-picker')[0];
 	cnv.height = 7*(CIRCLE_DIAMETER+VERTICAL_GAP_HEIGHT);
