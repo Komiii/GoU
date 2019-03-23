@@ -42,7 +42,7 @@
 .mdl-layout__drawer .avatar	page/styles.css	/^.mdl-layout__drawer .avatar {$/;"	c
 :root .demo-graph	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graph {$/;"	c
 :root .demo-graphs	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graphs {$/;"	c
-Another collapsible card	page/index.html	/^    <h2 class="mdl-card__title-text">Another collapsible card<\/h2>$/;"	i
+Another collapsible card	page/index.html	/^                            <h2 class="mdl-card__title-text">Another collapsible card<\/h2>$/;"	i
 Welcome	page/games.html	/^            <h2 class="mdl-card__title-text">Welcome<\/h2>$/;"	i
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graph {$/;"	s
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graphs {$/;"	s
