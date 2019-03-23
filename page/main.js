@@ -97,7 +97,7 @@ function setupCanvas(game, _state) {
 	ctx.textAlign = 'center';
 	ctx.textBaseline = 'middle';
 	for(var j = 0; j<7;j++){
-		text(ctx,days[((new Date().getDay())+j-1)%7], GAP_WIDTH/2,
+		text(ctx,days[((new Date().getDay())+j+6)%7], GAP_WIDTH/2,
 				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER);
 		for(var i = 0; i <= /* or < ??? */ 24; i += 2) {
 		    var curColors = getColors(getId(j, i/2));
