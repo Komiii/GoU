@@ -56,7 +56,7 @@ canvasState	page/main.js	/^var canvasState;$/;"	v
 circle	page/main.js	/^function circle(ctx, x, y, hour, day) {$/;"	f
 circles	page/main.js	/^var circles = [];$/;"	v
 colors	page/main.js	/^var colors = {$/;"	c
-compareDist	page/main.js	/^function compareDist(a,b){$/;"	f
+compareDist	page/main.js	/^        function compareDist(a, b) {$/;"	f	function:AnonymousFunctionf124cf210300
 data	page/main.js	/^var data  = {$/;"	c
 div.hidlu	page/styles.css	/^div.hidlu {$/;"	c
 games	page/main.js	/^    games: [],$/;"	p	class:data
@@ -71,8 +71,6 @@ selectionStep	page/main.js	/^    canvasState = { selectionStep: 0 };$/;"	p	class
 setupCanvas	page/main.js	/^function setupCanvas(game) {$/;"	f
 text	page/main.js	/^function text(ctx, text, x, y) {$/;"	f
 vue_app	page/main.js	/^var vue_app = new Vue({$/;"	v
-xClick	page/main.js	/^var xClick;$/;"	v
-yClick	page/main.js	/^var yClick;$/;"	v
 {{ game.name }}	page/games.html	/^                            <h2 class="mdl-card__title-text">{{ game.name }}<\/h2>$/;"	i
 {{ game.name }}	page/index.html	/^                            <h2 class="mdl-card__title-text">{{ game.name }}<\/h2>$/;"	i
 {{ game.name }}	page/myreserv.html	/^                                        <h2 class="mdl-card__title-text">{{ game.name }}<\/h2>$/;"	i

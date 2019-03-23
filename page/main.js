@@ -25,8 +25,6 @@ var CIRCLE_DIAMETER = (1080 - 13 * GAP_WIDTH) / 13;
 var VERTICAL_GAP_HEIGHT = CIRCLE_DIAMETER / 7;
 
 var circles = [];
-var xClick;
-var yClick;
 
 function circle(ctx, x, y, hour, day) {
 	ctx.beginPath();
@@ -47,9 +45,6 @@ var colors = {
 	selectedGap: '#b0bec5',
 }
 
-function compareDist(a,b){
-	return (Math.pow(a[0]-xClick,2)+Math.pow(a[1]-yClick,2))-(Math.pow(b[0]-xClick,2)+Math.pow(b[1]-yClick,2))
-}
 
 var canvasState;
 function onClick(column, row) {
@@ -57,6 +52,7 @@ function onClick(column, row) {
 }
 
 function setupCanvas(game) {
+    circles = [];
     canvasState = { selectionStep: 0 };
 
 	var cnv = document.getElementsByClassName('canvas-picker')[0];
@@ -75,11 +71,13 @@ function setupCanvas(game) {
 	cnv.addEventListener('click',function(event) {
         var b = cnv.getBoundingClientRect();
         var scale = cnv.width / parseFloat(b.width);
-        xClick = (event.clientX - b.left) * scale;
-        yClick = (event.clientY - b.top) * scale;
+        var xClick = (event.clientX - b.left) * scale;
+        var yClick = (event.clientY - b.top) * scale;
+        function compareDist(a, b) {
+            return (Math.pow(a[0]-xClick,2)+Math.pow(a[1]-yClick,2))-(Math.pow(b[0]-xClick,2)+Math.pow(b[1]-yClick,2))
+        }
 		circles.sort(compareDist);
-		console.log(circles[0]);
-		console.log(xClick,yClick);
+		onClick(circles[0][2], circles[0][3]);
     });
 }
 
