@@ -51,8 +51,14 @@ function compareDist(a,b){
 	return (Math.pow(a[0]-xClick,2)+Math.pow(a[1]-yClick,2))-(Math.pow(b[0]-xClick,2)+Math.pow(b[1]-yClick,2))
 }
 
+var canvasState;
+function onClick(column, row) {
+    console.log(column, row);
+}
 
 function setupCanvas(game) {
+    canvasState = { selectionStep: 0 };
+
 	var cnv = document.getElementsByClassName('canvas-picker')[0];
 	var ctx = cnv.getContext('2d');
 	ctx.textAlign = 'center';

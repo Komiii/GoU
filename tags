@@ -50,17 +50,21 @@ VERTICAL_GAP_HEIGHT	page/main.js	/^var VERTICAL_GAP_HEIGHT = CIRCLE_DIAMETER \/ 
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graph {$/;"	s
 _:-ms-input-placeholder	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graphs {$/;"	s
 body	page/styles.css	/^html, body {$/;"	s
+canvasState	page/main.js	/^    canvasState = { selectionStep: 0 };$/;"	c	class:setupCanvas
+canvasState	page/main.js	/^var canvasState;$/;"	v
 circle	page/main.js	/^function circle(ctx, x, y) {$/;"	f
 colors	page/main.js	/^var colors = {$/;"	c
 data	page/main.js	/^var data  = {$/;"	c
 div.hidlu	page/styles.css	/^div.hidlu {$/;"	c
 games	page/main.js	/^    games: [],$/;"	p	class:data
 html	page/styles.css	/^html, body {$/;"	s
+onClick	page/main.js	/^function onClick(column, row) {$/;"	f
 onGamesData	page/main.js	/^function onGamesData(games) {$/;"	f
 search	page/main.js	/^    search: '',$/;"	p	class:data
 seen	page/main.js	/^    seen: null,$/;"	p	class:data
 selected	page/main.js	/^	selected: '#00838f',$/;"	p	class:colors
 selectedGap	page/main.js	/^	selectedGap: '#b0bec5',$/;"	p	class:colors
+selectionStep	page/main.js	/^    canvasState = { selectionStep: 0 };$/;"	p	class:setupCanvas.canvasState
 setupCanvas	page/main.js	/^function setupCanvas(game) {$/;"	f
 text	page/main.js	/^function text(ctx, text, x, y) {$/;"	f
 vue_app	page/main.js	/^var vue_app = new Vue({$/;"	v
