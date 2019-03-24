@@ -70,6 +70,7 @@ html	page/styles.css	/^html, body {$/;"	s
 onClick	page/main.js	/^function onClick(row, column) {$/;"	f
 onGamesData	page/main.js	/^function onGamesData(games) {$/;"	f
 onclick	page/main.js	/^	cnv.onclick = function(event) {$/;"	f	function:cnv
+path	page/main.js	/^    path: '\/',$/;"	p	class:data
 search	page/main.js	/^    search: '',$/;"	p	class:data
 seen	page/main.js	/^    seen: null,$/;"	p	class:data
 selectedEnd	page/main.js	/^	selectedEnd: {$/;"	c	class:colors
