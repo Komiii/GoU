@@ -31,7 +31,7 @@ var circles = [];
 
 function circle(ctx, x, y, hour, day) {
     ctx.beginPath();
-    ctx.arc(x + CIRCLE_DIAMETER / 2 , y + CIRCLE_DIAMETER / 2 , CIRCLE_DIAMETER / 2 + VERTICAL_GAP_HEIGHT/2, 0, 2 * Math.PI);
+    ctx.arc(x  + CIRCLE_DIAMETER / 2 , y + CIRCLE_DIAMETER / 2 , CIRCLE_DIAMETER / 2 + VERTICAL_GAP_HEIGHT/2 + 1, 0, 2 * Math.PI);
     ctx.fill();
 
     circles.push([x + CIRCLE_DIAMETER / 2, y + CIRCLE_DIAMETER / 2, hour, day]);
@@ -40,11 +40,11 @@ function circle(ctx, x, y, hour, day) {
 function rectangle(ctx, x, y, hour, day, ishalf){
     ctx.beginPath();
     if(!ishalf){
-        ctx.rect(x - GAP_WIDTH/2 , y - VERTICAL_GAP_HEIGHT/2 , CIRCLE_DIAMETER + GAP_WIDTH, CIRCLE_DIAMETER + VERTICAL_GAP_HEIGHT);
+        ctx.rect(x - GAP_WIDTH/2 -1 , y - VERTICAL_GAP_HEIGHT/2 , CIRCLE_DIAMETER + GAP_WIDTH+1, CIRCLE_DIAMETER + VERTICAL_GAP_HEIGHT);
         ctx.fill();
     }else{
         ctx.fillStyle = '#29b6f6';
-        ctx.rect(x - GAP_WIDTH/2 , y - VERTICAL_GAP_HEIGHT/2 , (CIRCLE_DIAMETER + GAP_WIDTH)/2, (CIRCLE_DIAMETER + VERTICAL_GAP_HEIGHT));
+        ctx.rect(x - GAP_WIDTH/2 -1, y - VERTICAL_GAP_HEIGHT/2 , (CIRCLE_DIAMETER + GAP_WIDTH)/2 +1, (CIRCLE_DIAMETER + VERTICAL_GAP_HEIGHT));
         ctx.fill();
         ctx.fillStyle = '#00838f';
     }
