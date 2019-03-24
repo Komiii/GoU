@@ -28,8 +28,24 @@ var circles = [];
 
 function circle(ctx, x, y, hour, day) {
 	ctx.beginPath();
-	ctx.arc(x + CIRCLE_DIAMETER / 2, y + CIRCLE_DIAMETER / 2, CIRCLE_DIAMETER / 2, 0, 2 * Math.PI);
+	ctx.arc(x + CIRCLE_DIAMETER / 2 , y + CIRCLE_DIAMETER / 2 , CIRCLE_DIAMETER / 2 + VERTICAL_GAP_HEIGHT/2, 0, 2 * Math.PI);
 	ctx.fill();
+	
+	circles.push([x + CIRCLE_DIAMETER / 2, y + CIRCLE_DIAMETER / 2, hour, day]);
+}
+
+function rectangle(ctx, x, y, hour, day, ishalf){
+	ctx.beginPath();
+	if(!ishalf){
+	ctx.rect(x - GAP_WIDTH/2 , y - VERTICAL_GAP_HEIGHT/2 , CIRCLE_DIAMETER + GAP_WIDTH, CIRCLE_DIAMETER + VERTICAL_GAP_HEIGHT);
+	ctx.fill();
+	}else{
+	ctx.fillStyle = '#29b6f6';
+	ctx.rect(x - GAP_WIDTH/2 , y - VERTICAL_GAP_HEIGHT/2 , (CIRCLE_DIAMETER + GAP_WIDTH)/2, (CIRCLE_DIAMETER + VERTICAL_GAP_HEIGHT));
+	ctx.fill();
+	ctx.fillStyle = '#00838f';
+	}
+	
 	
 	circles.push([x + CIRCLE_DIAMETER / 2, y + CIRCLE_DIAMETER / 2, hour, day]);
 }
@@ -101,7 +117,7 @@ function getId(y, x) {
 
 function setupCanvas(game, _state) {
     circles = [];
-    state = _state || { selectionStep: false, selectionStart: getId(1,1), selectionEnd: getId(2,2), game: game };
+    state = _state || { selectionStep: false, selectionStart: -1, selectionEnd: -1, game: game };
 
 	var cnv = document.getElementsByClassName('canvas-picker')[0];
 	cnv.height = 7*(CIRCLE_DIAMETER+VERTICAL_GAP_HEIGHT);
@@ -114,9 +130,25 @@ function setupCanvas(game, _state) {
 		for(var i = 0; i <= /* or < ??? */ 24; i += 2) {
 		    var curColors = getColors(getId(j, i/2));
 			ctx.fillStyle = curColors.bg;
-			circle(ctx, 
-				(i/2+1) * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
-				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER, i/2, j);
+				if(getId(j,i/2)==state.selectionStart){
+					rectangle(ctx, 
+					(i/2+3/2) * (CIRCLE_DIAMETER + GAP_WIDTH)+GAP_WIDTH/2,
+					(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER, i/2, j,1);
+					circle(ctx, 
+					(i/2+1) * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
+					(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER, i/2, j);
+				}else if(getId(j,i/2)==state.selectionEnd){
+					rectangle(ctx, 
+					(i/2+1) * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
+					(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER, i/2, j,1);
+					circle(ctx, 
+					(i/2+1) * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
+					(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER, i/2, j);
+				}else{
+					rectangle(ctx, 
+					(i/2+1) * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
+					(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER, i/2, j,0);
+				}
 			ctx.fillStyle = curColors.text;
 			text(ctx, i + ':00',
 				(i/2+1) * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
