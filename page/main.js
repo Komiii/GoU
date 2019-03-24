@@ -2,6 +2,7 @@ var data  = {
     games: [],
     seen: null,
     search: '',
+    path: '/',
 };
 var vue_app = new Vue({
     el: '#app',
@@ -80,16 +81,21 @@ var state;
 function onClick(row, column) {
     console.log(column, row);
     var id = getId(column, row);
-    if(id < state.selectionStart) {
-        state.selectionStart = id;
-    } else if(id > state.selectionEnd) {
-        state.selectionEnd = id;
-    } else if(Math.abs(id - state.selectionEnd) < Math.abs(id - state.selectionStart)) {
-        state.selectionEnd = id;
-    } else if(Math.abs(id - state.selectionEnd) > Math.abs(id - state.selectionStart)) {
-        state.selectionStart = id;
+    if(state.selectionStep ^= true) {
+        if(id < state.selectionStart) {
+            state.selectionStart = id;
+        } else if(id > state.selectionEnd) {
+            state.selectionEnd = id;
+        } else if(Math.abs(id - state.selectionEnd) < Math.abs(id - state.selectionStart)) {
+            state.selectionEnd = id;
+        } else if(Math.abs(id - state.selectionEnd) > Math.abs(id - state.selectionStart)) {
+            state.selectionStart = id;
+        } else {
+            state[Math.random() > 0.5 ? 'selectionStart' : 'selectionEnd'] = id;
+        }
     } else {
-        state[Math.random() > 0.5 ? 'selectionStart' : 'selectionEnd'] = id;
+        state.selectionStart = id;
+        state.selectionEnd = id;
     }
 
     setupCanvas(state.game, state);
@@ -129,6 +135,7 @@ function setupCanvas(game, _state) {
 				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER);
 		for(var i = 0; i <= /* or < ??? */ 24; i += 2) {
 		    var curColors = getColors(getId(j, i/2));
+		    var curColorsBetween = getColorsBetween(getId(j, i/2), getId(j, i/2) + 1);
 			ctx.fillStyle = curColors.bg;
 				if(getId(j,i/2)==state.selectionStart){
 					rectangle(ctx, 
@@ -153,6 +160,10 @@ function setupCanvas(game, _state) {
 			text(ctx, i + ':00',
 				(i/2+1) * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
 				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER);
+
+
+			// for next text() above this loop
+			ctx.fillStyle = curColorsBetween.text;
 		}
 	}
 	cnv.onclick = function(event) {
