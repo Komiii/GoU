@@ -113,6 +113,7 @@ function setupCanvas(game, _state) {
 				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER);
 		for(var i = 0; i <= /* or < ??? */ 24; i += 2) {
 		    var curColors = getColors(getId(j, i/2));
+		    var curColorsBetween = getColorsBetween(getId(j, i/2), getId(j, i/2) + 1);
 			ctx.fillStyle = curColors.bg;
 			circle(ctx, 
 				(i/2+1) * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
@@ -121,6 +122,10 @@ function setupCanvas(game, _state) {
 			text(ctx, i + ':00',
 				(i/2+1) * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
 				(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER);
+
+
+			// for next text() above this loop
+			ctx.fillStyle = curColorsBetween.text;
 		}
 	}
 	cnv.onclick = function(event) {
