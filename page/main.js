@@ -25,6 +25,8 @@ var GAP_WIDTH = 1080 / 80;
 var CIRCLE_DIAMETER = (1080 - 14 * GAP_WIDTH) / 14;
 var VERTICAL_GAP_HEIGHT = CIRCLE_DIAMETER / 7;
 
+var current_user = 0;
+
 var circles = [];
 
 function circle(ctx, x, y, hour, day) {
