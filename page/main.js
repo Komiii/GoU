@@ -138,9 +138,11 @@ function setupCanvas(game, _state) {
 		    var curColorsBetween = getColorsBetween(getId(j, i/2), getId(j, i/2) + 1);
 			ctx.fillStyle = curColors.bg;
 				if(getId(j,i/2)==state.selectionStart){
-					rectangle(ctx, 
+					if(state.selectionStart!=state.selectionEnd){
+						rectangle(ctx, 
 					(i/2+3/2) * (CIRCLE_DIAMETER + GAP_WIDTH)+GAP_WIDTH/2,
 					(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER, i/2, j,1);
+					}
 					circle(ctx, 
 					(i/2+1) * (CIRCLE_DIAMETER + GAP_WIDTH) + GAP_WIDTH/2,
 					(1/2+j)*VERTICAL_GAP_HEIGHT+j*CIRCLE_DIAMETER, i/2, j);
