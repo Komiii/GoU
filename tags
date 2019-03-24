@@ -43,7 +43,7 @@
 :root .demo-graph	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graph {$/;"	c
 :root .demo-graphs	page/styles.css	/^_:-ms-input-placeholder, :root .demo-graphs {$/;"	c
 AnonymousFunctionf124cf210100	page/main.js	/^        gameClicked: function(game) {$/;"	f
-AnonymousFunctionf124cf210200	page/main.js	/^				setTimeout(function() {$/;"	f	function:AnonymousFunctionf124cf210100
+AnonymousFunctionf124cf210200	page/main.js	/^                setTimeout(function() {$/;"	f	function:AnonymousFunctionf124cf210100
 CIRCLE_DIAMETER	page/main.js	/^var CIRCLE_DIAMETER = (1080 - 14 * GAP_WIDTH) \/ 14;$/;"	v
 GAP_WIDTH	page/main.js	/^var GAP_WIDTH = 1080 \/ 80;$/;"	v
 VERTICAL_GAP_HEIGHT	page/main.js	/^var VERTICAL_GAP_HEIGHT = CIRCLE_DIAMETER \/ 7;$/;"	v
@@ -69,12 +69,13 @@ getId	page/main.js	/^function getId(y, x) {$/;"	f
 html	page/styles.css	/^html, body {$/;"	s
 onClick	page/main.js	/^function onClick(row, column) {$/;"	f
 onGamesData	page/main.js	/^function onGamesData(games) {$/;"	f
-onclick	page/main.js	/^	cnv.onclick = function(event) {$/;"	f	function:cnv
+onclick	page/main.js	/^    cnv.onclick = function(event) {$/;"	f	function:cnv
 path	page/main.js	/^    path: '\/',$/;"	p	class:data
+rectangle	page/main.js	/^function rectangle(ctx, x, y, hour, day, ishalf){$/;"	f
 search	page/main.js	/^    search: '',$/;"	p	class:data
 seen	page/main.js	/^    seen: null,$/;"	p	class:data
-selectedEnd	page/main.js	/^	selectedEnd: {$/;"	c	class:colors
-selectedGap	page/main.js	/^	selectedGap: {$/;"	c	class:colors
+selectedEnd	page/main.js	/^    selectedEnd: {$/;"	c	class:colors
+selectedGap	page/main.js	/^    selectedGap: {$/;"	c	class:colors
 selectedMiddle	page/main.js	/^    selectedMiddle: {$/;"	c	class:colors
 setupCanvas	page/main.js	/^function setupCanvas(game, _state) {$/;"	f
 state	page/main.js	/^var state;$/;"	v
