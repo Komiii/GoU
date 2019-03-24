@@ -67,7 +67,7 @@ getColors	page/main.js	/^function getColors(id) {$/;"	f
 getColorsBetween	page/main.js	/^function getColorsBetween(id1, id2) {$/;"	f
 getId	page/main.js	/^function getId(y, x) {$/;"	f
 html	page/styles.css	/^html, body {$/;"	s
-onClick	page/main.js	/^function onClick(column, row) {$/;"	f
+onClick	page/main.js	/^function onClick(row, column) {$/;"	f
 onGamesData	page/main.js	/^function onGamesData(games) {$/;"	f
 onclick	page/main.js	/^	cnv.onclick = function(event) {$/;"	f	function:cnv
 search	page/main.js	/^    search: '',$/;"	p	class:data

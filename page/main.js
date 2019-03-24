@@ -61,7 +61,7 @@ var colors = {
 var days = ["Pon.","Wt.","Śrd.","Czw.","Pt.","Sob.","Ndz."];
 
 var state;
-function onClick(column, row) {
+function onClick(row, column) {
     console.log(column, row);
     var id = getId(column, row);
     if(id < state.selectionStart) {
