@@ -76,9 +76,6 @@ function onClick(row, column) {
         state[Math.random() > 0.5 ? 'selectionStart' : 'selectionEnd'] = id;
     }
 
-    if(id < state['selectionEnd'] < state['selectionStart']) {
-        [ state['selectionStart'], state['selectionEnd'] ] = [ state['selectionEnd'], state['selectionStart'] ]
-    }
     setupCanvas(state.game, state);
 }
 
